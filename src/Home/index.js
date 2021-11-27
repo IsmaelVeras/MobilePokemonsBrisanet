@@ -6,8 +6,11 @@ export default function App() {
     <KeyboardAvoidingView style={styles.background}>
       <View style={styles.containerLogo}>
           <Image 
+            resizeMode="center"
+            style={styles.imageLogo}
             source={require('./assets/image/LogoPokemon.png')}
           />
+         
       </View>
 
       <View>
@@ -43,6 +46,8 @@ export default function App() {
 
       </View>
 
+          
+
     </KeyboardAvoidingView>
   );
 }
@@ -63,13 +68,11 @@ const styles = StyleSheet.create({
     flex:1,
     overflow: 'hidden',
     alignItems: 'center',
-    margin: 130,
-    maxHeight: '80%',
+    position: 'relative',
+    margin: 120,
   },
   textComece:{
     fontSize:35,
-    marginLeft:-20,
-    marginTop:-50,
     fontWeight: "bold",
     marginBottom: 35,
   },  
@@ -108,11 +111,8 @@ const styles = StyleSheet.create({
   },
   imageBottomLogin:{
     flex:1,
-    zIndex: -1,
-    position: 'relative',
-    marginBottom: -300,
-    transform: [{ rotate: '3.93deg' }],
-  },
+    marginBottom: -250,
+  }
 
   
 })
