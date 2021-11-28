@@ -1,22 +1,30 @@
 import React from "react";
-import { KeyboardAvoidingView} from 'react-native';
-import {
-  Wrapper, 
-  Container,
-  ImagemLogo
-} from './styles';
+import { Wrapper, ImagemLogo, ViewLogo  } from './styles';
 
 import LogoTelaHome from '../../../assets/image/LogoHome.png';
 
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import FavoritesScreen from '../TabMenu/FavoritesScreen';
+import SearchsScreen from '../TabMenu/SearchScreen';
+import AllScreen from '../TabMenu/AllScreen';
+const Tab = createMaterialTopTabNavigator();
+
 export default function Home(){
+
   return(
     <Wrapper>
-      <KeyboardAvoidingView>
+      <ViewLogo>
         <ImagemLogo 
-          resizeMode="contain"
+          resizeMode="center"
           source={LogoTelaHome}
         />
-      </KeyboardAvoidingView>
+      </ViewLogo>
+
+      <Tab.Navigator>
+        <Tab.Screen name="Favoritos" component={FavoritesScreen} />
+        <Tab.Screen name="Procurar" component={SearchsScreen} />
+        <Tab.Screen name="Ver todos" component={AllScreen} />
+      </Tab.Navigator>
     </Wrapper>
-  )
+  ) 
 }

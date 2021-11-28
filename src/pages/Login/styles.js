@@ -32,9 +32,8 @@ export const Button = styled.TouchableOpacity`
 
 export const ImagemLogo = styled.Image`
     overflow: hidden;
-    width: 65%;
+    width: 100%;
     height: 35%;
-    margin-left: 50px;
     margin-bottom: -50px;
 `;
 
