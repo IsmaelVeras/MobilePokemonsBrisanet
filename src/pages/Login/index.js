@@ -1,16 +1,15 @@
 import React from 'react';
 import { View, KeyboardAvoidingView, Image, TextInput, TouchableOpacity, Text, StyleSheet} from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-export default function App() {
+export default function Login({navigation}) {
   return (
+    <SafeAreaProvider>
     <KeyboardAvoidingView style={styles.background}>
       <View style={styles.containerLogo}>
           <Image 
-            resizeMode="center"
-            style={styles.imageLogo}
-            source={require('./assets/image/LogoPokemon.png')}
+            source={require('../../../assets/image/LogoPokemon.png')}
           />
-         
       </View>
 
       <View>
@@ -34,21 +33,23 @@ export default function App() {
           onChangeText={() => {}}
         />
 
-        <TouchableOpacity style={styles.btnSubmit}>
+        <TouchableOpacity
+          style={styles.btnSubmit}
+          onPress={() => navigation.navigate('Home')}
+        >
           <Text style={styles.btnSubmitText}>Entrar</Text>
         </TouchableOpacity>
 
         <Image 
             style={styles.imageBottomLogin}
             resizeMode="center"
-            source={require('./assets/image/ImageBottomLogin.png')}
+            source={require('../../../assets/image/ImageBottomLogin.png')}
         />
 
       </View>
 
-          
-
     </KeyboardAvoidingView>
+    </SafeAreaProvider>
   );
 }
 
@@ -68,11 +69,13 @@ const styles = StyleSheet.create({
     flex:1,
     overflow: 'hidden',
     alignItems: 'center',
-    position: 'relative',
-    margin: 120,
+    margin: 130,
+    maxHeight: '80%',
   },
   textComece:{
     fontSize:35,
+    marginLeft:-20,
+    marginTop:-50,
     fontWeight: "bold",
     marginBottom: 35,
   },  
@@ -111,8 +114,11 @@ const styles = StyleSheet.create({
   },
   imageBottomLogin:{
     flex:1,
-    marginBottom: -250,
-  }
+    zIndex: -1,
+    position: 'relative',
+    marginBottom: -300,
+    transform: [{ rotate: '3.93deg' }],
+  },
 
   
 })
