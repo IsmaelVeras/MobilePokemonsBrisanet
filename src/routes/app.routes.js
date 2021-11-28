@@ -11,11 +11,17 @@ const AppRoutes = () => (
     <AppStack.Screen 
       name="Login" 
       component={Login} 
+      options={{
+        headerShown: false
+      }}
     />
 
     <AppStack.Screen 
       name="Home" 
       component={Home} 
+      options={{
+        headerShown: true
+      }}
     />
 
   </AppStack.Navigator>

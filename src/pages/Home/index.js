@@ -1,9 +1,22 @@
 import React from "react";
+import { KeyboardAvoidingView} from 'react-native';
+import {
+  Wrapper, 
+  Container,
+  ImagemLogo
+} from './styles';
 
-import { Text } from "react-native";
+import LogoTelaHome from '../../../assets/image/LogoHome.png';
 
 export default function Home(){
   return(
-    <Text>Página Home</Text>
+    <Wrapper>
+      <KeyboardAvoidingView>
+        <ImagemLogo 
+          resizeMode="contain"
+          source={LogoTelaHome}
+        />
+      </KeyboardAvoidingView>
+    </Wrapper>
   )
 }
