@@ -1,5 +1,4 @@
 import React from 'react';
-import { KeyboardAvoidingView} from 'react-native';
 import {
   Wrapper, 
   Container, 
@@ -8,7 +7,8 @@ import {
   ImagemLogo, 
   TextLogin, 
   ImageBottom, 
-  TextEntrar 
+  TextEntrar,
+  ViewLogo
 } from './styles';
 
 import LogoTelaLogin from '../../../assets/image/LogoPokemon.png';
@@ -19,12 +19,13 @@ export default function Login({navigation}) {
   return (
     <Wrapper>
         <Container>
-        <KeyboardAvoidingView>
-
-          <ImagemLogo 
-            resizeMode="contain"
-            source={LogoTelaLogin}
-          />
+          
+          <ViewLogo>
+            <ImagemLogo 
+              resizeMode="contain"
+              source={LogoTelaLogin}
+            />
+          </ViewLogo>
 
         <TextLogin>
           Comece a coletar pokémons!
@@ -56,7 +57,6 @@ export default function Login({navigation}) {
             source={ImageBottomLogin}
         />
 
-        </KeyboardAvoidingView>
         </Container>
     </Wrapper>
   );

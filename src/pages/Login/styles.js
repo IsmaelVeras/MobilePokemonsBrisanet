@@ -2,12 +2,14 @@ import styled from 'styled-components/native';
 
 export const Wrapper = styled.View`
   background: #fff;
+  
 `;
 
 export const Container = styled.SafeAreaView`
-  padding: 0 20px;
-  justify-content: center;
-  
+  padding: 16px 20px;
+  justify-content:center;
+  position: relative;
+
 `;
 
 export const Input = styled.TextInput`
@@ -29,12 +31,17 @@ export const Button = styled.TouchableOpacity`
     align-items: center;
     justify-content:center;
 `;
-
+export const ViewLogo = styled.View`
+  margin:0px;
+  align-items: center;
+  justify-content:center;
+  
+`;
 export const ImagemLogo = styled.Image`
     overflow: hidden;
-    width: 100%;
-    height: 35%;
-    margin-bottom: -50px;
+    width: 206px;
+    margin-top: 40%;
+    height: 76px;
 `;
 
 export const ImageBottom = styled.Image`
@@ -49,10 +56,11 @@ export const ImageBottom = styled.Image`
 `;
 
 export const TextLogin = styled.Text`
-    font-size:30px;
+    font-size: 30px;
     font-weight: bold;
     line-height: 36px;
     margin-bottom: 40px;
+    margin-top: 35%;
 `;
 
 export const TextEntrar = styled.Text`
