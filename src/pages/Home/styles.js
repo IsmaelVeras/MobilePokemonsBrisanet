@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Wrapper = styled.View`
-  background: #fff;
+  flex: 1;
 `;
 
 export const Container = styled.SafeAreaView`
@@ -19,7 +19,6 @@ export const ImagemLogo = styled.Image`
 export const ViewLogo = styled.View`
   background: #FFCB05;
   padding: 5%;
-  height: 40%;
   justify-content: center;
   align-items: center;
 

@@ -14,7 +14,6 @@ import {
 import LogoTelaLogin from '../../../assets/image/LogoPokemon.png';
 import ImageBottomLogin from '../../../assets/image/ImageBottomLogin.png';
 
-
 export default function Login({navigation}) {
   return (
     <Wrapper>

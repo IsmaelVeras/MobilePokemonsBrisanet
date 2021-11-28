@@ -4,9 +4,10 @@ import { Wrapper, ImagemLogo, ViewLogo  } from './styles';
 import LogoTelaHome from '../../../assets/image/LogoHome.png';
 
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import FavoritesScreen from '../TabMenu/FavoritesScreen';
-import SearchsScreen from '../TabMenu/SearchScreen';
-import AllScreen from '../TabMenu/AllScreen';
+
+import Favorites from './Menu/Favorites';
+import Search from './Menu/Search';
+import All from './Menu/All';
 const Tab = createMaterialTopTabNavigator();
 
 export default function Home(){
@@ -21,9 +22,9 @@ export default function Home(){
       </ViewLogo>
 
       <Tab.Navigator>
-        <Tab.Screen name="Favoritos" component={FavoritesScreen} />
-        <Tab.Screen name="Procurar" component={SearchsScreen} />
-        <Tab.Screen name="Ver todos" component={AllScreen} />
+        <Tab.Screen name="Favoritos" component={Favorites} />
+        <Tab.Screen name="Procurar" component={Search} />
+        <Tab.Screen name="Ver todos" component={All} />
       </Tab.Navigator>
     </Wrapper>
   ) 
