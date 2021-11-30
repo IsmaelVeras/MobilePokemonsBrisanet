@@ -1,12 +1,19 @@
 import React from "react";
-import { Text } from 'react-native';
-import { Container } from './styles';
+import { Container, InputSearch, ImagemSearch } from './styles';
+import IconSearch from  '../../../../../assets/image/search.png';
 
-const SearchScreen = () => {
+export default function SearchScreen(){
   return(
     <Container>
-      <Text>Procurar</Text>
+      <InputSearch
+        placeholder="Procure por pokémons"
+        autoCorrect={false}
+        onChangeText={() => {}}
+      />
+      <ImagemSearch 
+        resizeMode="contain"
+        source={IconSearch}
+      />
     </Container>
   );
 }
-export default SearchScreen;

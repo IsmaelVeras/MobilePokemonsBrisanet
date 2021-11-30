@@ -17,15 +17,13 @@ import ImageBottomLogin from '../../../assets/image/ImageBottomLogin.png';
 export default function Login({navigation}) {
   return (
     <Wrapper>
-        <Container>
-          
-          <ViewLogo>
-            <ImagemLogo 
-              resizeMode="contain"
-              source={LogoTelaLogin}
-            />
-          </ViewLogo>
-
+      <Container>
+        <ViewLogo>
+          <ImagemLogo 
+            resizeMode="contain"
+            source={LogoTelaLogin}
+          />
+        </ViewLogo>
         <TextLogin>
           Comece a coletar pokémons!
         </TextLogin>
@@ -45,18 +43,15 @@ export default function Login({navigation}) {
         />
 
         {/* Botão Entrar */}
-        <Button
-          onPress={() => navigation.navigate('Home')}
-        >
+        <Button onPress={() => navigation.navigate('Home')}>
           <TextEntrar>Entrar</TextEntrar>
         </Button>
-
+     
         <ImageBottom
-            resizeMode="cover"
-            source={ImageBottomLogin}
+          resizeMode="cover"
+          source={ImageBottomLogin}
         />
-
-        </Container>
+      </Container>
     </Wrapper>
   );
 }
